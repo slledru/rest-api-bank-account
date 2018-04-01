@@ -1,9 +1,21 @@
 const express = require('express')
 const router = express.Router()
 
-/* GET users listing. */
+/* transactions */
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Transactions' })
+  res.render('index', { title: 'Accounts' })
+})
+router.get('/:id', (req, res, next) => {
+  res.render('index', { title: 'Accounts' })
+})
+router.post('/', (req, res, next) => {
+  res.render('index', { title: 'Accounts' })
+})
+router.put('/:id', (req, res, next) => {
+  res.render('index', { title: 'Accounts' })
+})
+router.delete('/:id', (req, res, next) => {
+  res.render('index', { title: 'Accounts' })
 })
 
 module.exports = router
