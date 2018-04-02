@@ -1,3 +1,5 @@
+const path = require('path')
+
 const transactionsFile = path.join(__dirname, 'transactions.json')
 const {
   loadDataStore,

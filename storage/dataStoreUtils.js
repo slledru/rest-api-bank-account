@@ -1,5 +1,4 @@
 const fs = require('fs')
-const path = require('path')
 const uuid = require('uuid')
 const httpErrors = require('http-errors')
 
@@ -10,7 +9,7 @@ function loadDataStore(dbFile, load) {
     }
     else {
       try {
-        load(JSON.parse(data)[key])
+        load(JSON.parse(data)['data'])
       }
       catch (ex) {
         saveDataStore(dbFile)

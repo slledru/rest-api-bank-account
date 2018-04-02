@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
+const accounts = require('../storage/accountDataStore')
 
-/* GET accounts. */
+/* accounts. */
 router.get('/', (req, res, next) => {
   res.render('index', { title: 'Accounts' })
 })

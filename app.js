@@ -4,10 +4,15 @@ const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
+const { loadAccounts } = require('./storage/accountDataStore')
+const { loadTransactions } = require('./storage/transactionDataStore')
+
 const accountsRouter = require('./routes/accounts')
 const transactionsRouter = require('./routes/transactions')
 
 const app = express()
+loadAccounts()
+loadTransactions()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
